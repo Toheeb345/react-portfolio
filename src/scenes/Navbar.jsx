@@ -16,11 +16,11 @@ const Link = ({ page, selectedPage, setSelectedPage}) => {
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
     const [isMenuToggled, setIsMenuToggled] = useState(false);
     const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
-    const navbarBackground = isTopOfPage ? "" : "bg-red";
+    const navbarBackground = isTopOfPage ? "" : "bg-[#120026]";
 
     return (<nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
         <div className="flex items-center justify-between mx-auto w-5/6">
-            <h4 className="font-playfair text-3xl font-bold">Toheeb</h4>
+            <h4 className="font-playfair text-3xl font-bold ">Toheeb</h4>
 
             {/* desktop nav */}
 
@@ -32,7 +32,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                     <Link page="Testimonials" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                     <Link page="Contact" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                 </div>
-            ) : (<button className="rounded-full bg-red p-2" onClick={() => setIsMenuToggled(!isMenuToggled)}>
+            ) : (<button className="rounded-full bg-[#120026] p-2" onClick={() => setIsMenuToggled(!isMenuToggled)}>
                 <img alt="menu-icon" src="../assets/menu-icon.svg" />
             </button>)}
 
@@ -47,7 +47,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                         </div>
 
                         {/* MENU ITEMS */}
-                    <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
+                    <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue justify-between">
                         <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                         <Link page="Skills" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                         <Link page="Projects" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
