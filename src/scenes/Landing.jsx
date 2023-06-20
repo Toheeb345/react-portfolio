@@ -31,13 +31,13 @@ const Landing = ({setSelectedPage}) => {
                     hidden: { opacity: 0, x: -50},
                     visible: { opacity: 1, x: 0}
                 }}>
-                    <p className="text-6xl font-playfair z-10 text-center md:text-start flex flex-wrap justify-center md:justify-normal md:flex-nowrap md:gap-3 gap-5">
+                    <p className="text-6xl font-playfair z-10 text-center md:text-start flex flex-wrap justify-center md:justify-normal md:flex-nowrap md:gap-3">
                         Omotosho {""}
-                        <span className=" relative text-deep-blue font-semibold z-20 before:content-brush before:absolute before:-left-[25px] before:-top-[80px] before:z-[-1]">
+                        <span className=" relative text-deep-blue font-semibold z-20 before:content-brush before:absolute before:-left-[25px] before:-top-[80px] before:z-[-1] top-8 md:top-0">
                           Toheeb  
                         </span>
                     </p>
-                    <p className=" mt-10 mb-7 text-sm text-center md:text-start">
+                    <p className=" sm:mt-10 mb-7 text-sm text-center md:text-start mt-20">
                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat laudantium ullam neque. Sunt, voluptatem reiciendis? 
                     </p>
                 </motion.div>
