@@ -1,6 +1,7 @@
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
 import {useForm} from 'react-hook-form';
+import { useState } from "react";
 
 const Contact = () => {
     const {
@@ -8,11 +9,13 @@ const Contact = () => {
         trigger,
         formState: {errors}
     } = useForm();
+    const [isPending, setIsPending] = useState(false);
 
     const onSubmit = async (e) => {
         const isValid = await trigger();
         if(!isValid) {
             e.preventDefault();
+            setIsPending(true);
         }
     }
 
@@ -101,7 +104,9 @@ const Contact = () => {
                         </p>
                         )}
 
-                        <button type="submit" className="px-5 py-3 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500 rounded-md">SUBMIT</button>
+                       {!isPending && <button type="submit" className="px-5 py-3 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500 rounded-md">SUBMIT</button>}
+                       {isPending && <button type="submit" className="px-5 py-3 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500 rounded-md" disabled>SUBMITTING...</button>}
+
                    </form>
                    </motion.div>
             </div>
