@@ -730,6 +730,10 @@ video {
   display: flex;
 }
 
+.grid{
+  display: grid;
+}
+
 .hidden{
   display: none;
 }
@@ -868,6 +872,10 @@ video {
 
 .gap-6{
   gap: 1.5rem;
+}
+
+.gap-2{
+  gap: 0.5rem;
 }
 
 .space-y-44 > :not([hidden]) ~ :not([hidden]){
@@ -1264,6 +1272,11 @@ body,
   content: var(--tw-content);
 }
 
+.before\:content-brush::before{
+  --tw-content: url('./assets/brush.png');
+  content: var(--tw-content);
+}
+
 .hover\:bg-blue:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(44 188 233 / var(--tw-bg-opacity));
@@ -1335,6 +1348,10 @@ body,
 
   .sm\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sm\:gap-2{
+    gap: 0.5rem;
   }
 }
 
