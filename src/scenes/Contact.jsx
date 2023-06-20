@@ -9,13 +9,11 @@ const Contact = () => {
         trigger,
         formState: {errors}
     } = useForm();
-    const [isPending, setIsPending] = useState(false);
 
     const onSubmit = async (e) => {
         const isValid = await trigger();
         if(!isValid) {
             e.preventDefault();
-            setIsPending(true);
         }
     }
 
@@ -104,8 +102,7 @@ const Contact = () => {
                         </p>
                         )}
 
-                       {!isPending && <button type="submit" className="px-5 py-3 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500 rounded-md">SUBMIT</button>}
-                       {isPending && <button type="submit" className="px-5 py-3 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500 rounded-md" disabled>SUBMITTING...</button>}
+                       <button type="submit" className="px-5 py-3 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500 rounded-md">SUBMIT</button>
 
                    </form>
                    </motion.div>
