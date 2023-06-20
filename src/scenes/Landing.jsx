@@ -31,7 +31,7 @@ const Landing = ({setSelectedPage}) => {
                     hidden: { opacity: 0, x: -50},
                     visible: { opacity: 1, x: 0}
                 }}>
-                    <p className="text-6xl font-playfair z-10 text-center md:text-start flex flex-wrap justify-center md:justify-normal md:flex-nowrap gap-3">
+                    <p className="text-6xl font-playfair z-10 text-center md:text-start flex flex-wrap justify-center md:justify-normal md:flex-nowrap md:gap-3 gap-5">
                         Omotosho {""}
                         <span className=" relative text-deep-blue font-semibold z-20 before:content-brush before:absolute before:-left-[25px] before:-top-[80px] before:z-[-1]">
                           Toheeb  

@@ -878,6 +878,10 @@ video {
   gap: 0.5rem;
 }
 
+.gap-5{
+  gap: 1.25rem;
+}
+
 .space-y-44 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(11rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1326,6 +1330,10 @@ body,
     position: relative;
   }
 
+  .xs\:gap-10{
+    gap: 2.5rem;
+  }
+
   .xs\:font-semibold{
     font-weight: 600;
   }
@@ -1422,6 +1430,14 @@ body,
 
   .md\:gap-6{
     gap: 1.5rem;
+  }
+
+  .md\:gap-7{
+    gap: 1.75rem;
+  }
+
+  .md\:gap-3{
+    gap: 0.75rem;
   }
 
   .md\:space-y-1 > :not([hidden]) ~ :not([hidden]){
