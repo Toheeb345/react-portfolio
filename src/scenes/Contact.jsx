@@ -59,7 +59,7 @@ const Contact = () => {
                    <form
                     onSubmit={onSubmit} 
                     target="_blank"
-                    action="https://formsubmit.co/307af54cc4768059a883793a52ca1c3d" method="POST">
+                    action="https://formsubmit.co/omotoshotoheeb2022@gmail.com" method="POST">
                         <input className="w-full bg-blue font-semibold placeholder:text-black outline-none p-3" type="text" name="name" placeholder="NAME" {...register("name", {
                             required: true,
                             maxLength: 100,
