@@ -7,7 +7,7 @@ const Landing = ({setSelectedPage}) => {
     const aboveLarge = useMediaQuery("(min-width: 1060px)");
 
     return ( 
-        <section id="home" className="md:flex md:justify-between md:items-center gap-16 md:py-[5%]">
+        <section id="home" className="md:flex md:justify-between md:items-center gap-16 md:py-[5%] pt-5">
 
             {/* IMAGE SECTION */}
           <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">

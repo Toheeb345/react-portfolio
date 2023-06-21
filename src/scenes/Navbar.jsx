@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
+import { motion } from "framer-motion";
 
 
 const Link = ({ page, selectedPage, setSelectedPage}) => {
@@ -38,7 +39,32 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
             {/* MOBILE MENU POPUP */}
             {!isAboveSmallScreens && isMenuToggled && (
-                <div className="fixed right-0 bottom-0 h-full bg-blue w-[300px]">
+
+<motion.div
+className="fixed right-0 bottom-0 h-full bg-blue w-[300px]"
+initial={{
+    opacity: 0,
+    x: 50,
+}}
+animate={{
+    opacity: 1,
+    x: 0,
+    transition: {
+        duration: 0.8,
+        ease: [0, 0.71, 0.2, 1.01]
+    },
+}}
+exit={{
+    opacity: 0,
+    x: 50,
+    transition: {
+        duration: 0.8,
+        ease: [0, 0.71, 0.2, 1.01]
+    },
+}}
+>
+
+                <div className="">
                         {/* CLOSE ICON  */}
                         <div className="flex justify-end p-12">
                             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
@@ -47,7 +73,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                         </div>
 
                         {/* MENU ITEMS */}
-                    <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue justify-between">
+                    <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue justify-between space-y-5">
                         <div className="" onClick={() => setIsMenuToggled(!isMenuToggled)} >
                         <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                         </div>
@@ -66,6 +92,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                         </div>
                     </div>
                 </div>
+                </motion.div>
             )}
         </div>
         </nav>);
