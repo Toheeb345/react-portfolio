@@ -48,11 +48,22 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
                         {/* MENU ITEMS */}
                     <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue justify-between">
+                        <div className="" onClick={() => setIsMenuToggled(!isMenuToggled)} >
                         <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                        <Link page="Skills" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                        <Link page="Projects" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                        {/* <Link page="Testimonials" selectedPage={selectedPage} setSelectedPage={setSelectedPage} /> */}
-                        <Link page="Contact" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                        </div>
+
+                        <div className="" onClick={() => setIsMenuToggled(!isMenuToggled)} >
+                        <Link page="Skills" selectedPage={selectedPage} setSelectedPage={setSelectedPage} onClick={() => setIsMenuToggled(!isMenuToggled)} />
+                        </div>
+
+                        <div className="" onClick={() => setIsMenuToggled(!isMenuToggled)} >
+                        <Link page="Projects" selectedPage={selectedPage} setSelectedPage={setSelectedPage} onClick={() => setIsMenuToggled(!isMenuToggled)} />
+                        </div>
+                        {/* <Link page="Testimonials" selectedPage={selectedPage} setSelectedPage={setSelectedPage} onClick={() => setIsMenuToggled(!isMenuToggled)} /> */}
+
+                        <div className="" onClick={() => setIsMenuToggled(!isMenuToggled)} >
+                        <Link page="Contact" selectedPage={selectedPage} setSelectedPage={setSelectedPage} onClick={() => setIsMenuToggled(!isMenuToggled)} />
+                        </div>
                     </div>
                 </div>
             )}
