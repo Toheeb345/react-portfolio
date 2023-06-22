@@ -12,11 +12,11 @@ const Landing = ({setSelectedPage}) => {
             {/* IMAGE SECTION */}
           <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
             {aboveLarge ? (
-                <div className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-t-[400px] before:w-full before:max-w-[400px] before:h-full before:border-2 before:border-blue before:z-[-1] md:before:max-w-[600px]">
-                    <img src="assets/profile-image.png" alt="profile" className=" hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]"/>
+                <div className="">
+                    <img src="assets/profile-imagee.jpg" alt="profile" className=" filter saturate-200 transition duration-500 z-10 rounded-t-full w-[400px] h-[600px] object-cover object-top"/>
                 </div>
             ) : (
-                <img src="assets/profile-image.png" alt="profile" className="w-full z-10 max-w-[400px] md:max-w-[600px]"/>
+                <img src="assets/profile-imagee.jpg" alt="profile" className="w-full  rounded-t-full h-[600px] object-cover object-top filter saturate-200"/>
             )}
             </div> 
             

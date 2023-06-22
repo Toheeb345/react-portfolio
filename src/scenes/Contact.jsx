@@ -2,6 +2,7 @@ import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
 import {useForm} from 'react-hook-form';
 import { useState } from "react";
+import SocialMediaIcons from "../components/SocialMediaIcons";
 
 const Contact = () => {
     const {
@@ -39,16 +40,16 @@ const Contact = () => {
             {/* FORM & IMAGE SECTION */}
             <div className="md:flex md:justify-between gap-16 mt-5">
                 <motion.div
-                   className="basis-1/2 flex justify-center"
+                   className="basis-[20%] flex justify-center"
                    initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5}} transition={{ duration: 0.5}} variants={{
                     hidden: { opacity: 0, y: 50},
                     visible: { opacity: 1, y: 0}
                    }}>
-                        <img src="../assets/contact-image.jpeg" alt="contact" />
+                        <SocialMediaIcons />
                 </motion.div>
 
                 <motion.div
-                   className="basis-1/2 mt-10 md:mt-0"
+                   className="basis-[80%] mt-10 md:mt-0"
                    initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5}} transition={{ delay: 0.2,  duration: 0.5}} variants={{
                     hidden: { opacity: 0, y: 50},
                     visible: { opacity: 1, y: 0}
