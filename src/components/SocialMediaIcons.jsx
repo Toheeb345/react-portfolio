@@ -1,6 +1,6 @@
 const SocialMediaIcons = () => {
     return (
-        <div className="flex justify-center md:justify-start md:my-10 my-5 md:gap-7 xs:gap-10">
+        <div className="flex justify-center md:justify-start md:my-10 my-5 md:gap-7 space-x-5 md:space-x-1">
             <a href="#" className=" hover:opacity-50 transition duration-500" target="_blank" rel="noreferrer">
                 <img src="../assets/linkedin.png" alt="linkedin-link" />
             </a>
