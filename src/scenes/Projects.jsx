@@ -33,14 +33,14 @@ const Project = ({ title, body, live , source, img }) => {
                 <p className="text-2xl font-playfair italic font-bold tracking-wide">{title}</p>
                 <p className="mt-7 tracking-wider">{body}</p>
             </div>
-            <img src={img} alt={projectTitle} className=" w-[400px] h-[400px] object-cover" />
+            <img src={img} alt={projectTitle} className=" w-[400px] h-[400px]" />
         </motion.div>
              <div className="flex px-[3%] pb-4 items-center basis-full text-[#343030] justify-center pt-[2px] font-semibold">
-                <button className="basis-1/2 bg-blue py-1 border-2 border-black border-dotted rounded-md">
-                <a className="" href={source} >View Source</a>
+                <button className="basis-1/2 bg-blue py-1 border-2 rounded-md">
+                <a className="" href={source} >GitHub Link</a>
                 </button>
                 <LineGradient width="w-[40%]" />
-                <button className="basis-1/2 bg-blue py-1 border-2 border-black border-dotted rounded-md">
+                <button className="basis-1/2 bg-blue py-1 border-2 rounded-md">
                     <a className="" href={live} >Live Page</a>
                 </button>
                 

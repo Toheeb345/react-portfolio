@@ -59,7 +59,7 @@ const Contact = () => {
                     onSubmit={onSubmit} 
                     target="_blank"
                     action="https://formsubmit.co/307af54cc4768059a883793a52ca1c3d" method="POST">
-                        <input className="w-full bg-blue font-semibold placeholder:text-black outline-none p-3" type="text" name="name" placeholder="NAME" {...register("name", {
+                        <input className="w-full bg-blue font-semibold placeholder:text-black outline-none p-3 rounded" type="text" name="name" placeholder="NAME" {...register("name", {
                             required: true,
                             maxLength: 100,
                         })}/>
@@ -72,7 +72,7 @@ const Contact = () => {
                         )}
 
                         <input
-                             className="w-full bg-blue font-semibold placeholder:text-black outline-none p-3 mt-5" type="email" name="email" placeholder="EMAIL" {...register("email", {
+                             className="w-full bg-blue font-semibold placeholder:text-black outline-none p-3 mt-5 rounded" type="email" name="email" placeholder="EMAIL" {...register("email", {
                                 required: true,
                                 pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                             })}
@@ -87,7 +87,7 @@ const Contact = () => {
 
 
                         <textarea
-                             className="w-full bg-blue font-semibold placeholder:text-black outline-none p-3 mt-5" type="text" placeholder="MESSAGE" name="message" 
+                             className="w-full bg-blue font-semibold placeholder:text-black outline-none p-3 mt-5 rounded" type="text" placeholder="MESSAGE" name="message" 
                              rows={4}
                              cols={50}
                              {...register("message", {
